@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --c-text: #1c0717;
+  --c-background: #fbeff8;
+  --c-Primary: #511523;
+  --c-Secondary: #ffffff;
+  --c-Accent: #000000;
+}
+
+/* https://realtimecolors.com/?colors=1c0717-fbeff8-511523-ffffff-000000 */

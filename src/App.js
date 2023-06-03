@@ -1,23 +1,20 @@
+import { useState } from 'react';
+import BlockImages from './Components/BlockImages';
 import logo from './logo.svg';
-import './App.css';
+import './Style/App.css';
 
 function App() {
+  const [images, setImages] = useState([
+    {text: "image1", imgName: "image1.png"},
+    {text: "image2", imgName: "image2.png"},
+    {text: "image2", imgName: "image2.png"},
+    {text: "image2", imgName: "image2.png"},
+    {text: "image2", imgName: "image2.png"},
+    {text: "image2", imgName: "image2.png"},
+  ])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BlockImages images={images} setImages={setImages}></BlockImages>
     </div>
   );
 }
