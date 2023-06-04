@@ -2,3 +2,7 @@
     border: 1px solid black;
     margin: 10px;
 }
+
+.ImageCard:hover {
+    margin: 5px;
+}
