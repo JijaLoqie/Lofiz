@@ -12,6 +12,7 @@
 
   font-size: calc(10px + 2vmin);
   color: var(--c-text);
+  box-shadow: 0 0 0 5ch black;
 
 }
 
@@ -22,8 +23,20 @@
 	background-image: var(--c-background-image);
 	background-repeat: repeat;
 	background-size:cover;
-	background-position: center;
 	filter: blur(5px);
+	box-shadow: 0 0 0 1ch black;
 	z-index: -1;
-	box-shadow: 0 0 0 5ch black;
+	animation: slidebck 200000ms infinite running;
+}
+
+@keyframes slidebck{
+	from {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 0 -100vh;
+	}
+	to {
+		background-position: 0 0;
+	}
 }
