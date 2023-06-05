@@ -1,50 +1,27 @@
-import { useEffect, useState } from "react"; 
-import useSound from "use-sound"; // for handling the sound
-import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai"; // icons for play and pause
-import { IconContext } from "react-icons"; // for customazing the icons
-import styles from "../Style/MediaPlayer.module.css"
+import styles from "../Style/MediaPlayer.module.css";
 
+import CardMusic from "./CardMusic";
 
+import musaUrl1 from "../music/music1.m4a";
+import musaUrl2 from "../music/music2.m4a";
+import { useState } from "react";
 
-// MediaPlayer
+const MediaPlayer = ({ isOpen }) => {
+  const [musicCards, setMusicCards] = useState([
+    { url: musaUrl1, text: "Naruto Fight" },
+    { url: musaUrl2, text: "Naruto God"},
+  ]);
 
-const MediaPlayer = ({text, musa}) => {
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [play, { pause, duration, sound }] = useSound(musa);
+  return (
+    <div className={styles.MediaPlayer} style={{display: isOpen ? `flex` : `none`}}>
+      {musicCards.map((music, index) => {
+        return <CardMusic key = {index}
+          text={music.text}
+          musaUrl={music.url}
+        />;
+      })}
+    </div>
+  );
+};
 
-    const playingButton = () => {
-        if (isPlaying) {
-          pause(); // this will pause the audio
-          setIsPlaying(false);
-        } else {
-          play(); // this will play the audio
-          setIsPlaying(true);
-        }
-      };
-
-
-      return (
-        <span className={styles.component} onClick={playingButton}>
-          <div className={styles.title}>
-          {text}
-          </div>
-          <div>
-          {!isPlaying ? (
-              <button className={styles.playButton}>
-                <IconContext.Provider value={{ size: "3em", color: "black" }}>
-                  <AiFillPlayCircle />
-                </IconContext.Provider>
-              </button>
-            ) : (
-              <button className={styles.playButton} onClick={playingButton}>
-                <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
-                  <AiFillPauseCircle />
-                </IconContext.Provider>
-              </button>
-            )}
-          </div>
-        </span>
-      );
-}
-
-export default MediaPlayer
+export default MediaPlayer;

@@ -26,7 +26,7 @@
 	filter: blur(5px);
 	box-shadow: 0 0 0 1ch black;
 	z-index: -1;
-	animation: slidebck 200000ms infinite running;
+	animation: slidebck 100000ms infinite running;
 }
 
 @keyframes slidebck{

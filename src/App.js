@@ -1,25 +1,24 @@
-import { useState } from 'react';
-import BlockImages from './Components/BlockImages';
-import logo from './logo.svg';
-import './Style/App.css';
+import { useState } from "react";
+import BlockImages from "./Components/BlockImages";
+import "./Style/App.css";
+
+import ManagerButtons from "./Components/ManagerButtons";
 import MediaPlayer from './Components/MediaPlayer';
 
-
-import musaUrl1 from "./music/music1.m4a";
-import musaUrl2 from "./music/music2.m4a";
-
 function App() {
-  const [mediaUrl, setMediaUrl] = useState("");
+  const [backOpen, setBackOpen] = useState(false);
+  const [musicOpen, setMusicOpen] = useState(false);
+  const [designOpen, setDesignOpen] = useState(false);
 
   const [images, setImages] = useState([
-    {text: "image1", imgName: "image1.png"},
-    {text: "image2", imgName: "image2.png"},
-    {text: "image2", imgName: "image3.jpg"},
-    {text: "image2", imgName: "image4.jpg"},
-    {text: "image2", imgName: "image5.jpg"},
-    {text: "image2", imgName: "image6.jpg"},
-    {text: "image2", imgName: "image7.jpg"},
-  ])
+    { text: "image1", imgName: "image1.png" },
+    { text: "image2", imgName: "image2.png" },
+    { text: "image2", imgName: "image3.jpg" },
+    { text: "image2", imgName: "image4.jpg" },
+    { text: "image2", imgName: "image5.jpg" },
+    { text: "image2", imgName: "image6.jpg" },
+    { text: "image2", imgName: "image7.jpg" },
+  ]);
 
   const setBackground = (imageSrc) => {
     document.documentElement.style.cssText = `--c-background-image: url(${imageSrc}), url(${imageSrc})`;
@@ -29,13 +28,20 @@ function App() {
     <>
       <div className="Background"></div>
       <div className="App">
-      <MediaPlayer text="Music 1" musa={musaUrl1}/>
-      <MediaPlayer text="Music 2" musa={musaUrl2}/>
+		<MediaPlayer isOpen={musicOpen}/>
         <BlockImages
           images={images}
+		  isOpen={backOpen}
           setImages={setImages}
           setBackground={setBackground}
         ></BlockImages>
+        <ManagerButtons
+          toggles={{
+            Back: () => {setBackOpen((opened) => !opened)},
+            Music: ()=> {setMusicOpen((opened) => !opened)},
+            Design: ()=> {setDesignOpen((opened) => !opened)},
+          }}
+        />
       </div>
     </>
   );
