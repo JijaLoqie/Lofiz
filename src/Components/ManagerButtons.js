@@ -12,14 +12,14 @@ const ManagerButtons = ({ toggles }) => {
     >
       {isHover ? (
         <>
-          <div className={styles.Button} onClick={toggles.Back}>
-            Backs
-          </div>
+          {/* <div className={styles.Button} onClick={toggles.Design}>
+            Design
+          </div> */}
           <div className={styles.Button} onClick={toggles.Music}>
             Music
           </div>
-          <div className={styles.Button} onClick={toggles.Design}>
-            Design
+          <div className={styles.Button} onClick={toggles.Back}>
+            Backs
           </div>
         </>
       ) : (
