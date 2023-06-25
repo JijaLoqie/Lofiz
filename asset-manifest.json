@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Lofiz/static/css/main.98864637.css",
-    "main.js": "/Lofiz/static/js/main.41055de2.js",
+    "main.css": "/Lofiz/static/css/main.a026d723.css",
+    "main.js": "/Lofiz/static/js/main.edd7188a.js",
     "static/js/845.c8e8dd08.chunk.js": "/Lofiz/static/js/845.c8e8dd08.chunk.js",
     "static/media/image2.png": "/Lofiz/static/media/image2.4df7aee8a52335a8fcac.png",
     "static/media/music2.m4a": "/Lofiz/static/media/music2.b1f6a9049b478ee5ff5a.m4a",
@@ -14,13 +14,14 @@
     "static/media/image3.jpg": "/Lofiz/static/media/image3.a034c8c5645f919844e9.jpg",
     "static/media/addCard.png": "/Lofiz/static/media/addCard.d16b7080fdd23b4f8834.png",
     "static/media/favicon.ico": "/Lofiz/static/media/favicon.4fe75d5f9adb18067b85.ico",
+    "static/media/logo.svg": "/Lofiz/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Lofiz/index.html",
-    "main.98864637.css.map": "/Lofiz/static/css/main.98864637.css.map",
-    "main.41055de2.js.map": "/Lofiz/static/js/main.41055de2.js.map",
+    "main.a026d723.css.map": "/Lofiz/static/css/main.a026d723.css.map",
+    "main.edd7188a.js.map": "/Lofiz/static/js/main.edd7188a.js.map",
     "845.c8e8dd08.chunk.js.map": "/Lofiz/static/js/845.c8e8dd08.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.98864637.css",
-    "static/js/main.41055de2.js"
+    "static/css/main.a026d723.css",
+    "static/js/main.edd7188a.js"
   ]
 }
